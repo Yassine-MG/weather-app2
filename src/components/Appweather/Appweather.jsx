@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Journey from "../Journey/Journey";
+
 export default function Appweather() {
   const [search, setSearch] = useState("");
   const [update, setUpdate] = useState(false);
@@ -7,6 +8,7 @@ export default function Appweather() {
   const [dayArray, setDayArray] = useState([]);
   const [city, setCity] = useState("");
   const [temp, setTemp] = useState("");
+  const [temp2, setTemp2] = useState("");
   const handleInput = (e) => {
     setSearch(e.target.value);
   };
@@ -31,26 +33,29 @@ export default function Appweather() {
       setDayArray(data.days);
       setCity(data.address);
       setTemp(data.currentConditions.temp);
+      setTemp2(data.currentConditions.temp + "°");
     }
     setSearch("");
   }, [data]);
-  //   console.log(search);
+
   return (
     <div className="">
       <h1 className="text-center md:text-6xl text-2xl tracking-wide font-semibold text-sky-300">
         Weather App
       </h1>
       <h2
+        id="Degre"
         className={
           temp < 0
-            ? "text-cyan-600 font-bold text-9xl fixed"
+            ? "text-cyan-600 font-bold md:text-6xl lg:text-9xl fixed text-2xl"
             : temp > 20
-            ? "text-red-400 font-extrabold text-xl fixed"
-            : "text-sky-200 font-extrabold text-9xl fixed"
+            ? "text-red-400 font-bold md:text-6xl lg:text-9xl fixed text-2xl"
+            : "text-sky-200 font-bold md:text-6xl lg:text-9xl fixed text-2xl"
         }
       >
-        {temp + "°C"}
+        {temp2}
       </h2>
+
       <form onSubmit={handleSubmit} className="flex mb-20 justify-center mt-20">
         <input
           className="px-5 py-2 text-lg outline-none tracking-wider md:w-3/12 w-3/6"
@@ -66,6 +71,7 @@ export default function Appweather() {
           Search
         </button>
       </form>
+
       <h1 className="text-center font-bold p-10 text-white md:text-6xl text-2xl">
         {city}
       </h1>
@@ -86,3 +92,8 @@ export default function Appweather() {
     </div>
   );
 }
+//  temp < 0
+//             ? "text-cyan-600 font-bold md:text-9xl fixed "
+//             : temp > 20
+//             ? "text-red-400 font-bold md:text-9xl fixed "
+//             : "text-sky-200 font-bold md:text-9xl fixed "
