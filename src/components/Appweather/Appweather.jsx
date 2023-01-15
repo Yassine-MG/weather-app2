@@ -92,8 +92,3 @@ export default function Appweather() {
     </div>
   );
 }
-//  temp < 0
-//             ? "text-cyan-600 font-bold md:text-9xl fixed "
-//             : temp > 20
-//             ? "text-red-400 font-bold md:text-9xl fixed "
-//             : "text-sky-200 font-bold md:text-9xl fixed "
