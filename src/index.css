@@ -1,3 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +14,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);  */
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); 
+  background-size: cover;
+  min-height: 100vh;
 }
 
 code {
