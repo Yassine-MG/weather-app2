@@ -47,10 +47,10 @@ export default function Appweather() {
         id="Degre"
         className={
           temp < 0
-            ? "text-cyan-600 font-bold md:text-6xl lg:text-9xl fixed text-2xl italic"
+            ? "text-cyan-600 font-bold md:text-3xl lg:text-5xl fixed text-2xl italic"
             : temp >= 20
-            ? "text-red-400 font-bold md:text-6xl lg:text-9xl fixed text-2xl italic"
-            : "text-sky-200 font-bold md:text-6xl lg:text-9xl fixed text-2xl italic"
+            ? "text-red-400 font-bold md:text-3xl lg:text-5xl fixed text-2xl italic"
+            : "text-sky-200 font-bold md:text-3xl lg:text-5xl fixed text-2xl italic"
         }
       >
         {temp2}
@@ -83,7 +83,7 @@ export default function Appweather() {
           return (
             <div
               key={`${index}`}
-              className="text-center w-screen md:w-1/4 lg:w-1/5 border-2 my-6 mx-5 p-10 border-solid border-sky-200 rounded-lg"
+              className="text-center w-screen md:w-5/12 lg:w-1/5 border-2 my-6 mx-5 p-4 border-solid border-sky-200 rounded-lg"
             >
               <Journey
                 dayName={dayName[0]}
