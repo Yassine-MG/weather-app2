@@ -5,7 +5,7 @@ export default function Journey(props) {
     <div className="">
       <div className="day-container">
         <div className="city-date">
-          <h1 className="text-5xl font-semibold text-sky-200 mb-8 italic">{props.dayName}</h1>
+          <h1 className="text-2xl font-semibold text-sky-200 mb-8 italic">{props.dayName}</h1>
           <h2 className="text-2xl font-semibold text-sky-200">
             {props.dayDate}
           </h2>
