@@ -65,7 +65,7 @@ export default function Appweather() {
           value={search}
         />
         <button
-          className="px-5 bg-teal-300 rounded-r-lg text-white font-bold text-lg shadow-lg shadow-cyan-500/50"
+          className="px-5 hover:bg-red-400 hover:shadow-red-900/50 ease-out duration-500 bg-teal-300 rounded-r-lg text-white font-bold text-lg shadow-lg shadow-cyan-500/50"
           type="submit"
         >
           Search
