@@ -47,10 +47,10 @@ export default function Appweather() {
         id="Degre"
         className={
           temp < 0
-            ? "text-cyan-600 font-bold md:text-3xl lg:text-5xl fixed text-2xl italic"
+            ? "text-cyan-600 font-bold md:text-3xl lg:text-5xl text-2xl italic"
             : temp >= 20
-            ? "text-red-400 font-bold md:text-3xl lg:text-5xl fixed text-2xl italic"
-            : "text-sky-200 font-bold md:text-3xl lg:text-5xl fixed text-2xl italic"
+            ? "text-red-400 font-bold md:text-3xl lg:text-5xl text-2xl italic"
+            : "text-sky-200 font-bold md:text-3xl lg:text-5xl text-2xl italic"
         }
       >
         {temp2}
